@@ -1,0 +1,142 @@
+body {
+    margin: 0px;
+}
+
+ /* cabezote */
+ header {
+    background-color: yellow;
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+ }
+ header h1 {
+    grid-column: span 12;
+    margin: 0px;
+    padding: 5px;
+    text-align: middle;
+ }
+
+nav ul{ 
+    margin: 0px;
+    background-color: green;
+}
+
+.main-nav {
+    background-color: green;
+}
+
+.wrapper ul li a{
+    grid-column: 12;
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.wrapper ul li a:hover{
+    display: block;
+    background-color: #42B881;
+}
+
+/*menor a 500px */
+.wrapper {
+    font-family: sans-serif;
+    max-width: 1024px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: repeat(12, [col-start] 1fr); grid-gap: 2px; 7 
+} 
+
+.wrapper > * { 
+    border: 2px solid #f08c00; 
+    /* background-color: #ffec99; */ 
+    padding: 10px; 
+    grid-column: col-start / span 12; 
+} 
+
+nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.content .content{
+    grid-column: span 8;
+}
+
+
+
+/* mayor a 500 menor de 700 */
+
+ @media (min-width: 500px) { 
+     .content { 
+         grid-column: col-start / span 9; 
+     } 
+     .side { 
+         grid-column: col-start 10 / span 3; 
+     } 
+     nav ul { 
+         display: flex; 
+     } 
+     nav ul li { 
+         margin-right: 10px; 
+     } 
+}
+
+/* mayor a 700 */
+
+@media (min-width: 700px) { 
+    .main-nav { 
+        grid-column: col-start / span 2; 
+    } 
+    .content { 
+        grid-column: col-start 3 / span 8; 
+    } 
+    .side { 
+        grid-column: col-start 11 / span 2; 
+    } 
+    nav ul { 
+        flex-direction: column; 
+    }  
+}
+
+section {
+    float: left;
+    margin-left: 0px;
+ }
+/*imagenes */
+aside {
+    float: left;
+    margin-top: 0px; 
+ }
+/*imagenes grandes */
+aside img {
+    height: 200px;
+    width: 360px;
+    display: block;
+    margin-left:5px;
+ }
+article {
+    clear: both;
+ }
+
+/*Imagenes pequeñaas */
+ article img {
+    float: left;
+    width: 100px;
+    height: 80px;
+    margin-right: 15px;
+ }
+
+/* pie de pagina */
+ footer {
+   clear: both;
+   background-color: yellow;
+   margin: 0px;
+   padding: 5px;
+   border-top: 3px solid black;
+   font-family: sans-serif;
+ }
+
+
+
